@@ -1,113 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Will You Be My Valentine? 💖</title>
-  <style>
-    body {
-      font-family: 'Comic Sans MS', 'Arial', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
-      height: 100vh;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-    }
+    <meta charset="UTF-8"/>
+    <title>Will You Be My Valentine? 💖</title>
+    <style>
+        body {
+            font-family: 'Poppins', 'Arial', sans-serif;
+            background: linear-gradient(135deg, #f7f7f7, #eaeaea);
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #222;
+        }
 
-    .card {
-      background: rgba(255, 255, 255, 0.2);
-      padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-      max-width: 400px;
-    }
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+        }
 
-    h1 {
-      font-size: 2.2rem;
-      margin-bottom: 10px;
-    }
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
 
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 30px;
-    }
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
 
-    button {
-      font-size: 1.1rem;
-      padding: 12px 25px;
-      border: none;
-      border-radius: 30px;
-      cursor: pointer;
-      margin: 10px;
-      transition: transform 0.2s ease;
-    }
+        button {
+            font-size: 1.1rem;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            margin: 10px;
+            transition: transform 0.2s ease;
+        }
 
-    #yesBtn {
-      background-color: #ff4d6d;
-      color: white;
-    }
+        #yesBtn {
+            background-color: #d72638;
+            color: white;
+        }
 
-    #yesBtn:hover {
-      transform: scale(1.1);
-    }
+        #yesBtn:hover {
+            transform: scale(1.1);
+        }
 
-    #noBtn {
-      background-color: #fff;
-      color: #ff4d6d;
-      position: relative;
-    }
+        #noBtn {
+            background-color: #f1f1f1;
+            color: #555;
+            position: relative;
+        }
 
-    .hidden {
-      display: none;
-    }
+        .hidden {
+            display: none;
+        }
 
-    .heart {
-      font-size: 3rem;
-      animation: float 1.5s infinite alternate;
-    }
+        .heart {
+            font-size: 3rem;
+            animation: float 1.5s infinite alternate;
+        }
 
-    @keyframes float {
-      from { transform: translateY(0); }
-      to { transform: translateY(-10px); }
-    }
-  </style>
+        .valentine-gif {
+            width: 220px;
+            max-width: 100%;
+            border-radius: 14px;
+            margin: 20px auto;
+            display: block;
+        }
+
+        .confetti {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background-color: #ff6b81;
+            top: -10px;
+            animation: fall 3s linear forwards;
+            opacity: 0.9;
+        }
+
+        @keyframes float {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(360deg);
+            }
+        }
+
+    </style>
 </head>
 <body>
 
-  <div class="card" id="question">
+<div class="card" id="question">
     <h1>Hey you 😌</h1>
     <p>So I was wondering…<br><strong>Will you be my Valentine?</strong></p>
+    <img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWp5anBybGltcXo5Y3dubDBzd2V4anluc2NxZ2h2ejBnY2p0cDNvNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wvYNSqBAMDVx8CEYkt/giphy.gif"
+         alt="Cute Valentine GIF"
+         class="valentine-gif"/>
+    <button id="yesBtn">YES 🥰</button>
+    <button id="noBtn">No 😭</button>
+</div>
 
-    <button id="yesBtn">YES 💖</button>
-    <button id="noBtn">No 😐</button>
-  </div>
+<div class="card hidden" id="answer">
+    <div class="heart"> ♥️♥️♥️</div>
+    <h1>I KNEW IT... 😌</h1>
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHQ0dG9yaXNuM282MjU3b3NhbWhkdHhsZW81emN1ZzZwdnhmN2pncCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/DURbX7oesHiaA/giphy.gif"
+         alt="Celebration GIF"
+         class="valentine-gif"
+    />
+    <p>
+        Best decision ever 😍<br>
+        You just made me the happiest person alive 💕<br>
+        Can’t wait to be your Valentine 💖
+    </p>
+</div>
 
-  <div class="card hidden" id="answer">
-    <div class="heart">💘💘💘</div>
-    <h1>YAYYYYY!!!</h1>
-    <p>Best decision ever 😍<br>
-    I can’t wait to be your Valentine 💕</p>
-  </div>
-
-  <script>
+<script>
     const noBtn = document.getElementById("noBtn");
     const yesBtn = document.getElementById("yesBtn");
     const question = document.getElementById("question");
     const answer = document.getElementById("answer");
 
     noBtn.addEventListener("mouseover", () => {
-      const x = Math.random() * 200 - 100;
-      const y = Math.random() * 200 - 100;
-      noBtn.style.transform = `translate(${x}px, ${y}px)`;
+        const x = Math.random() * 200 - 100;
+        const y = Math.random() * 200 - 100;
+        noBtn.style.transform = `translate(${x}px, ${y}px)`;
     });
 
     yesBtn.addEventListener("click", () => {
-      question.classList.add("hidden");
-      answer.classList.remove("hidden");
+        question.classList.add("hidden");
+        answer.classList.remove("hidden");
+        launchConfetti();
     });
-  </script>
+
+    function launchConfetti() {
+        for (let i = 0; i < 80; i++) {
+            const confetti = document.createElement("div");
+            confetti.classList.add("confetti");
+
+            confetti.style.left = Math.random() * 100 + "vw";
+            confetti.style.backgroundColor =
+                ["#ff6b81", "#ffd166", "#6a4c93", "#f72585"][
+                    Math.floor(Math.random() * 4)
+                    ];
+            confetti.style.animationDuration =
+                Math.random() * 2 + 2 + "s";
+
+            document.body.appendChild(confetti);
+
+            setTimeout(() => confetti.remove(), 3000);
+        }
+    }
+</script>
 
 </body>
 </html>
